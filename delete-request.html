@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request - Thinko</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .header {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navigation a {
+            display: inline-block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 600;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #3498db;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p, li {
+            color: #555;
+            font-size: 16px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+        .active {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:disabled {
+            background-color: #95c9ef;
+            cursor: not-allowed;
+        }
+        #success-message {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .success-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e1f5e9;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .success-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: #34c759;
+        }
+        @media (max-width: 600px) {
+            body {
+                margin: 0;
+            }
+            .container {
+                padding: 20px 15px;
+                border-radius: 0;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navigation {
+                margin-top: 15px;
+            }
+            .navigation a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Thinko</h1>
+            <div class="navigation">
+                <a href="index.html">Privacy Policy</a>
+                <a href="delete-request.html" class="active">Data Deletion</a>
+            </div>
+        </div>
+        
+        <h1>Data Deletion Request</h1>
+
+        <p>In accordance with our Privacy Policy, you have the right to request the deletion of your personal data. Please fill out this form to submit your request.</p>
+        
+        <div class="highlight">
+            <p>Please note that deleting your data will remove your account and all associated information from our systems. This action cannot be undone.</p>
+        </div>
+        
+        <div id="request-form">
+            <form id="deletion-form">
+                <div>
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+                
+                <div>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter the email associated with your account">
+                </div>
+                
+                <div>
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                
+                <div>
+                    <label for="reason">Reason for Deletion (Optional)</label>
+                    <textarea id="reason" name="reason" placeholder="Please let us know why you're requesting data deletion"></textarea>
+                </div>
+                
+                <button type="submit" id="submit-btn">Submit Deletion Request</button>
+            </form>
+            
+            <div class="highlight" style="margin-top: 30px;">
+                <h3 style="margin-top: 0;">Alternative Contact Method</h3>
+                <p>You can also send your data deletion request directly to: <a href="mailto:thinkotechsup@gmail.com">thinkotechsup@gmail.com</a></p>
+                <p>Please include your full name, email address, and phone number in your email to help us identify and process your request.</p>
+            </div>
+        </div>
+        
+        <div id="success-message">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </div>
+            <h2>Request Initiated</h2>
+            <p>Your email application should have opened with a pre-filled message requesting data deletion. Please send the email to complete your request.</p>
+            <p>If your email application didn't open automatically, please send an email to <a href="mailto:thinkotechsup@gmail.com">thinkotechsup@gmail.com</a> with your deletion request including your:</p>
+            <ul style="width: fit-content; margin: 0 auto; text-align: left;">
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+            </ul>
+            <p style="margin-top: 20px;">We'll process your request and send confirmation within 5 business days.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 QOTO TECHNOLOGIES PRIVATE LIMITED. All rights reserved.</p>
+            <p>Thinko is a trademark of QOTO TECHNOLOGIES PRIVATE LIMITED.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('deletion-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const reason = document.getElementById('reason').value;
+            
+            // Create mailto link
+            const subject = encodeURIComponent("Data Deletion Request");
+            const body = encodeURIComponent(
+                `I would like to request deletion of my data.\n\n` +
+                `Full Name: ${fullName}\n\n` +
+                `Email: ${email}\n\n` +
+                `Phone: ${phone}\n\n` +
+                `Reason for deletion: ${reason}\n\n` +
+                `Thank you.`
+            );
+            
+            // Open email client
+            window.location.href = `mailto:thinkotechsup@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Show success message
+            document.getElementById('request-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
